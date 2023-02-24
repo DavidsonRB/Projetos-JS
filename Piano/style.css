@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#teclado {
+    background-image: url(img/back.webp);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.teclado-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 60px);
+    user-select: none;
+}
+
+.teclado .titulo {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.teclado {
+    width: 1200px;
+    height: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000D;
+    border-radius: 0 0 20px 20px;
+    font-weight: bold;
+}
+
+.teclado .botoes {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 100%;
+    gap: 10px;
+}
+
+.conjuntoBtn {
+    display: flex;
+    position: relative;
+}
+
+.conjuntoBtn .branco {
+    width: 80px;
+    height: 450px;
+    background-color: #FFF;
+    border-radius: 0 0 20px 20px;
+}
+
+.branco span {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 5px 2px #CCC;
+    border-radius: inherit;
+}
+
+.branco span p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.conjuntoBtn .preto {
+    width: 80px;
+    height: 250px;
+    position: absolute;
+    z-index: 99;
+    margin-left: 45px;
+    background-color: #000;
+    border-radius: 0 0 20px 20px;
+}
+
+.preto span {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 5px 2px #CCC;
+    border-radius: inherit;
+}
+
+.preto span p {
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.branco.key.active {
+    position: relative;
+}
+
+.key.active {
+    top: 50px;
+    /* transition: all ease 0.3; */
+}
+
+/* COMPOSER */
+.composer {
+    width: 260px;
+    margin-top: 20px;
+}
+
+.composer #input {
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 10px 15px;
+}
+
+.composer button {
+    width: 100%;
+    height: 40px;
+    background: #000D;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.composer button:hover {
+    background-color: #0003;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 16px;
+    background-color: #000;
+    color: #FFF;
+}
