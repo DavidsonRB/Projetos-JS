@@ -110,7 +110,6 @@ body {
 
 .key.active {
     top: 50px;
-    transition: all ease 0.3;
 }
 
 /* COMPOSER */
