@@ -2,6 +2,14 @@ document.body.addEventListener('keyup', (event) => {
     playSound(event.code.toLocaleLowerCase());
 });
 
+let key = document.querySelectorAll('.key');
+key.forEach(key => {
+    key.addEventListener('click', (event) => {
+        playSound(event.target.getAttribute('data-key'));
+        console.log(event.target.getAttribute('data-key'));
+    })
+});
+
 let composer = document.querySelector(`.composer button`);
 composer.addEventListener('click', () => {
     let song = document.querySelector('#input').value;
